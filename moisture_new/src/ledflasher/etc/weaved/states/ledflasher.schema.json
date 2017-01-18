@@ -1,0 +1,12 @@
+{
+  "_ledflasher": {
+    "_status": {
+      "enum": ["idle", "animating"],
+      "default": "idle"
+    },
+    "_leds": {"items": "boolean"},
+    "_moisture": {
+        "type" : "string"
+    }
+  }
+}

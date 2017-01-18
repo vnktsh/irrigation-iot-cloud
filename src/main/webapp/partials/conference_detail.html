@@ -1,0 +1,63 @@
+<div ng-controller="ConferenceDetailCtrl">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="messages" class="alert alert-{{alertStatus}}" ng-show="messages">
+                <span ng-bind="messages"></span>
+                <i class="dismiss-messages pull-right glyphicon glyphicon-remove" ng-click="messages = ''"
+                   ng-show="messages"></i>
+            </div>
+            <img class="spinner" src="/img/ajax-loader.gif" ng-show="loading"/>
+        </div>
+    </div>
+
+    <div class="row" ng-init="init()">
+        <div class="col-md-9">
+            <div class="well well-sm">
+                <h2>{{conference.name}}</h2>
+                <h5>{{conference.description}}</h5>
+                <div>
+                    <label for="registered">Field Zip-Code </label>
+                    <span id="registered">{{conference.maxAttendees}}</span>
+                </div>
+                <div>
+                    <label for="organizer">Field Owner: </label>
+                    <span id="organizer">{{conference.organizerDisplayName}}</span>
+                </div>
+                <div>
+                    <label for="requiredSensorData">Required Moisture Level:  </label>
+                    <span id="requiredSensorData">{{conference.requiredSensorData}}</span>
+                </div>
+                <div>
+                    <label for="actualSensorData">Actual Moisture Level:  </label>
+                    <span id="actualSensorData">{{conference.actualSensorData}}</span>
+                </div>
+                
+                
+				
+            </div>
+
+            <form class="form" novalidate role="form">
+                <fieldset>
+                    <div>
+                        <label for="city">City: </label>
+                        <span id="city">{{conference.city}}</span>
+                    </div>
+                    <div>
+                        <label for="topics">Crop Type : </label>
+                        <span id="topics">
+                            <span ng-repeat="topic in conference.topics" class="label label-primary label-separated">{{topic}}</span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="startDate">Season Start Date: </label>
+                        <span id="startDate">{{conference.startDate | date:'dd-MMMM-yyyy'}}</span>
+                    </div>
+                    <div>
+                        <label for="endDate">Season End Date: </label>
+                        <span id="endDate">{{conference.endDate | date:'dd-MMMM-yyyy'}}</span>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "service_name": "com.android.LEDService",
+  "object_manager": {
+    "name": "com.android.LEDService.ObjectManager",
+    "object_path": "/com/android/LEDService"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_ledflasher": {
+    "_set": {
+      "parameters": {
+        "_led": {"minimum": 1, "maximum": 4},
+        "_on": "boolean"
+      }
+    },
+    "_toggle": {
+      "parameters": {
+        "_led": {"minimum": 1, "maximum": 4}
+      }
+    },
+    "_animate": {
+      "parameters": {
+        "_duration": {"minimum": 0.1, "maximum": 100.0},
+        "_type": ["none", "marquee_left", "marquee_right", "blink"]
+      }
+    }
+  }
+}

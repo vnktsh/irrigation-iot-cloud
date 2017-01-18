@@ -1,0 +1,2 @@
+/system/bin/ledflasher                  u:object_r:ledflasher_exec:s0
+/system/bin/ledservice                  u:object_r:ledservice_exec:s0

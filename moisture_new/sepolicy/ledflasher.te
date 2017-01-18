@@ -1,0 +1,9 @@
+# Domain for LED Service daemon.
+type ledflasher, domain;
+type ledflasher_exec, exec_type, file_type;
+
+init_daemon_domain(ledflasher)
+allow_crash_reporter(ledflasher)
+
+unix_socket_connect(ledflasher, dbus_daemon, dbus_daemon)
+dontaudit ledflasher kernel:system module_request;

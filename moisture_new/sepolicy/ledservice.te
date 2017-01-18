@@ -1,0 +1,11 @@
+# Domain for LED Service daemon.
+type ledservice, domain;
+type ledservice_exec, exec_type, file_type;
+
+init_daemon_domain(ledservice)
+allow_crash_reporter(ledservice)
+
+unix_socket_connect(ledservice, dbus_daemon, dbus_daemon)
+dontaudit ledservice kernel:system module_request;
+
+allow ledservice sysfs:file write;

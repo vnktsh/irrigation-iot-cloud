@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<node name="/com/android/LEDService/Service"
+      xmlns:tp="http://telepathy.freedesktop.org/wiki/DbusSpec#extensions-v0">
+  <interface name="com.android.LEDService.Service">
+    <method name="SetLED">
+      <arg name="led" type="i" direction="in"/>
+      <arg name="on" type="b" direction="in"/>
+      <annotation name="org.chromium.DBus.Method.Kind" value="simple"/>
+    </method>
+    <method name="GetLED">
+      <arg name="led" type="i" direction="in"/>
+      <arg name="on" type="b" direction="out"/>
+      <annotation name="org.chromium.DBus.Method.Kind" value="simple"/>
+    </method>
+    <method name="GetAllLEDs">
+      <arg name="on" type="ab" direction="out"/>
+      <annotation name="org.chromium.DBus.Method.Kind" value="simple"/>
+    </method>
+ 	<method name="GetMoistureReading">
+      <arg name="on" type="i" direction="out"/>
+      <annotation name="org.chromium.DBus.Method.Kind" value="simple"/>
+    </method>
+  </interface>
+</node>
